@@ -5,21 +5,24 @@ import java.math.BigDecimal;
 public class StopAtivo {
 	
 	public static int MAX_NUM_NOTIFIC = 3;
-	private String ativo;
-	StopDisparo minDisparo = new StopDisparo();
-	StopDisparo maxDisparo = new StopDisparo();
+	private String codigoAtivo;
+	private StopDisparo minDisparo = new StopDisparo();
+	private StopDisparo maxDisparo = new StopDisparo();
+	private boolean habilitado;
 	
-	public StopAtivo(String ativo, String precoMinDisparo, String precoMaxDisparo) {
-		this.ativo = ativo;
+	public StopAtivo(String codigoAtivo, String precoMinDisparo, String precoMaxDisparo, boolean habilitado) {
+		this.codigoAtivo = codigoAtivo;
 		this.minDisparo.setPreco(new BigDecimal(precoMinDisparo));
 		this.maxDisparo.setPreco(new BigDecimal(precoMaxDisparo));
+		this.habilitado = habilitado;
 	}
 	
-	public String getAtivo() {
-		return ativo;
+	public String getCodigoAtivo() {
+		return codigoAtivo;
 	}
-	public void setAtivo(String ativo) {
-		this.ativo = ativo;
+
+	public void setCodigoAtivo(String codigoAtivo) {
+		this.codigoAtivo = codigoAtivo;
 	}
 
 	public StopDisparo getMinDisparo() {
@@ -36,6 +39,14 @@ public class StopAtivo {
 
 	public void setMaxDisparo(StopDisparo maxDisparo) {
 		this.maxDisparo = maxDisparo;
+	}
+
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		this.habilitado = habilitado;
 	}
 
 }

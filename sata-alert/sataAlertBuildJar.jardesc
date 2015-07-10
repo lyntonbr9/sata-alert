@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="D:/workspace/ws-sata-git/stockoptionsanalysis/app/libs/sata-alert.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/sata-alert/sataAlertBuildJar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <file path="/sata-alert/.project"/>
+        <file path="/sata-alert/.classpath"/>
+        <file path="/sata-alert/.gitignore"/>
+        <javaElement handleIdentifier="=sata-alert/src"/>
+    </selectedElements>
+</jardesc>
