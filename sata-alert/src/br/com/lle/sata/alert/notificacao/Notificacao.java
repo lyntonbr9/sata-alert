@@ -1,4 +1,4 @@
-package br.com.lle.alert.notificacao;
+package br.com.lle.sata.alert.notificacao;
 
 import static br.com.lle.sata.util.LogUtil.log;
 import static br.com.lle.sata.util.StringUtil.concat;
@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import br.com.lle.alert.domain.AlertaStop;
-import br.com.lle.alert.domain.AvisoStop;
-import br.com.lle.alert.domain.StopAtivo;
-import br.com.lle.alert.domain.UsuarioAlert;
-import br.com.lle.alert.interfaces.INotificacao;
-import br.com.lle.alert.monitor.VerificaStop;
+import br.com.lle.sata.alert.domain.AlertaStop;
+import br.com.lle.sata.alert.domain.AvisoStop;
+import br.com.lle.sata.alert.domain.StopAtivo;
+import br.com.lle.sata.alert.domain.UsuarioAlert;
+import br.com.lle.sata.alert.interfaces.INotificacao;
+import br.com.lle.sata.alert.monitor.VerificaStop;
 import br.com.lle.sata.mobile.Content;
 import br.com.lle.sata.mobile.POST2GCM;
 

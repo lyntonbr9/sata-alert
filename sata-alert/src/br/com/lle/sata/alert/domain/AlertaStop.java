@@ -1,4 +1,4 @@
-package br.com.lle.alert.domain;
+package br.com.lle.sata.alert.domain;
 
 public class AlertaStop {
 	

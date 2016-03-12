@@ -1,12 +1,12 @@
-package br.com.lle.alert.monitor;
+package br.com.lle.sata.alert.monitor;
 
 import static br.com.lle.sata.util.LogUtil.log;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import br.com.lle.alert.domain.AvisoStop;
-import br.com.lle.alert.domain.StopAtivo;
+import br.com.lle.sata.alert.domain.AvisoStop;
+import br.com.lle.sata.alert.domain.StopAtivo;
 import br.com.lle.sata.mobile.core.interfaces.IBuscaCotacao;
 import br.com.lle.sata.mobile.core.robo.BVMFBuscaCotacao;
 

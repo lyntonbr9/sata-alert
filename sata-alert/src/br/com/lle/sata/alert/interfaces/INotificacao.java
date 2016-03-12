@@ -1,6 +1,6 @@
-package br.com.lle.alert.interfaces;
+package br.com.lle.sata.alert.interfaces;
 
-import br.com.lle.alert.domain.UsuarioAlert;
+import br.com.lle.sata.alert.domain.UsuarioAlert;
 
 public interface INotificacao {
 
