@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import br.com.lle.Content;
-import br.com.lle.POST2GCM;
 import br.com.lle.alert.domain.AlertaStop;
 import br.com.lle.alert.domain.AvisoStop;
 import br.com.lle.alert.domain.StopAtivo;
 import br.com.lle.alert.domain.UsuarioAlert;
 import br.com.lle.alert.interfaces.INotificacao;
 import br.com.lle.alert.monitor.VerificaStop;
+import br.com.lle.sata.mobile.Content;
+import br.com.lle.sata.mobile.POST2GCM;
 
 public class Notificacao implements INotificacao {
 
