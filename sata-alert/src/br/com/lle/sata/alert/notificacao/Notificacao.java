@@ -20,8 +20,6 @@ import br.com.lle.sata.mobile.POST2GCM;
 public class Notificacao implements INotificacao {
 
 	private final static String SERVER_API_KEY = "AIzaSyAJkI3UGZ2u6hlj3uAIpPFhnJ4X29q5bgw";
-    
-//	private final static String[] DISPOSITIVOS_IDS = {"APA91bFlzrQS8tDD7C1ao5YqfbZEsLNyrfymaWhW-a6vm7f3Vde4ufxXp_ods6WGw9WLa6F71pzsqd29GcDTiAMZwV_gXiKvOFSu4fEhxRcMWe3SnMy0WS1pbc17vnMR3yLxkXCf9vxFHzERBdcWRo0yB8Oski6cYopbhBFTpXFKk5A1YRRvlTc"};
 	
 	private static int HORA_COMECO_BVMF = 10; // as 10 horas comeca
 	private static int HORA_FIM_BVMF = 17; // termina as 17 hs
@@ -29,22 +27,29 @@ public class Notificacao implements INotificacao {
 	
 	@Override
 	public void notificar(UsuarioAlert usuario, String msg) {
-    	Content content = createContent(usuario, msg);
+		
+        notificar(usuario, msg, msg);
+    }
+	
+	@Override
+	public void notificar(UsuarioAlert usuario, String titulo, String msg) {
+		
+		Content content = createContent(usuario, titulo, msg);
     	
         POST2GCM.post(SERVER_API_KEY, content);
-    }
-
-    public static Content createContent(UsuarioAlert usuario, String msg){
+	}
+	
+	public Content createContent(UsuarioAlert usuario, String titulo, String msg){
         Content c = new Content();
         
         c.addRegId(usuario.getRegId());
         
-        c.createData(msg, msg);
+        c.createData(titulo, msg);
 
         return c;
     }
     
-    public static List<String> getAlertMessages(List<AlertaStop> alertas) {
+    public List<String> getAlertMessages(List<AlertaStop> alertas) {
     	log("Vai recuperar as msgens de alerta");
     	List<String> msgs = new ArrayList<String>();
     	AvisoStop as = new AvisoStop();
@@ -69,9 +74,9 @@ public class Notificacao implements INotificacao {
     public static void main( String[] args )
     {
         log( "Monitorando STOPs..." );
-        INotificacao notif = new Notificacao();
+        Notificacao notif = new Notificacao();
         VerificaStop vs = new VerificaStop();
-        List<AvisoStop> ass = carregarAvisosStop();
+        List<AvisoStop> ass = notif.carregarAvisosStop();
         // recupera a data atual
         Calendar dataAtual = Calendar.getInstance();
         SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -105,7 +110,7 @@ public class Notificacao implements INotificacao {
 		}
     }
     
-    public static List<AvisoStop> carregarAvisosStop() {
+    public List<AvisoStop> carregarAvisosStop() {
 		List<AvisoStop> avisosStop = new ArrayList<AvisoStop>();
 		// usuario lynton
 		AvisoStop avisoStop = new AvisoStop();
@@ -132,5 +137,7 @@ public class Notificacao implements INotificacao {
         
 		return avisosStop;
 	}
+
+	
 
 }

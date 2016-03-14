@@ -5,5 +5,6 @@ import br.com.lle.sata.alert.domain.UsuarioAlert;
 public interface INotificacao {
 
 	 public void notificar(UsuarioAlert usuario, String msg);
+	 public void notificar(UsuarioAlert usuario, String titulo, String msg);
 	 
 }

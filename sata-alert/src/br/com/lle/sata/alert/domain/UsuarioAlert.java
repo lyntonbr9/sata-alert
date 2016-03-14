@@ -4,6 +4,13 @@ public class UsuarioAlert {
 	private String login;
 	private String regId;
 	
+	public UsuarioAlert() {}
+	
+	public UsuarioAlert(String login, String regId) {
+		this.login = login;
+		this.regId = regId;
+	}
+	
 	public String getLogin() {
 		return login;
 	}
